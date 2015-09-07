@@ -1,0 +1,89 @@
+<div id="page-header" class="clearfix">
+    <div class="page-header">
+        <h2>News Feed</h2>
+        <span class="txt">What's the buzz this week?</span>
+    </div>
+    <div class="header-stats">
+        <div class="spark clearfix">
+            <div class="spark-info"><span class="number">2345</span>Visitors</div>
+            <div id="spark-visitors" class="sparkline"><canvas width="99" height="20" style="display: inline-block; width: 99px; height: 20px; vertical-align: top;"></canvas></div>
+        </div>
+        <div class="spark clearfix">
+            <div class="spark-info"><span class="number">17345</span>Views</div>
+            <div id="spark-templateviews" class="sparkline"><canvas width="114" height="20" style="display: inline-block; width: 114px; height: 20px; vertical-align: top;"></canvas></div>
+        </div>
+        <div class="spark clearfix">
+            <div class="spark-info"><span class="number">3700$</span>Sales</div>
+            <div id="spark-sales" class="sparkline"><canvas width="109" height="20" style="display: inline-block; width: 109px; height: 20px; vertical-align: top;"></canvas></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div id="checkAll-active" class="col-lg-12">
+        <!-- col-lg-10 start here -->
+        <div class="row gallery">
+            <!-- Start .row -->
+            <div class="col-xs-12 col-md-6">
+                <!-- Start .col-md-3 -->
+                
+                <% @media_hits.each do |h| %>
+                <div class="panel panel-default plain" id="dyn_0">
+                    <!-- Start .panel -->
+                    
+                    <div class="panel-heading">
+                        <h3><strong><%= h.title %></strong> 
+                            <br><small><i>by <%= h.author %></i></small>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <p><%= h.text %></p>
+                        <p><a href="#">Read more</a></p>
+                    </div>
+                </div>
+                <% end %>
+                <!-- End .panel -->
+                
+            </div>
+            <!-- End .col-md-3 -->
+        </div>
+        <!-- End .row -->
+    </div>
+    <!-- col-lg-10 end here -->
+</div>
+
+<div class="col-lg-13">
+    <!-- col-lg-12 start here -->
+    <div class="panel panel-default toggle panelClose panelRefresh" id="dyn_2">
+        <!-- Start .panel -->
+        <div class="panel-heading">
+            <h4 class="panel-title">Media Hits Database</h4>
+        <div class="panel-controls panel-controls-right"><a href="#" class="panel-refresh"><i class="fa fa-circle-o"></i></a><a href="#" class="toggle panel-minimize"><i class="fa fa-angle-up"></i></a><a href="#" class="panel-close"><i class="fa fa-times"></i></a></div></div>
+        
+        <div class="panel-body">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: 100%; height: auto;"><div class="table-responsive" style="overflow: hidden; width: 100%; height: auto;"><div id="tabletools_wrapper" class="dataTables_wrapper form-inline"><div class="DTTT btn-group"><a class="btn btn-default DTTT_button_copy" id="ToolTables_tabletools_0"><span>Copy</span><div style="position: absolute; left: 0px; top: 0px; width: 54px; height: 29px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_1" src="http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="54" height="29" name="ZeroClipboard_TableToolsMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=54&amp;height=29" wmode="transparent"></div></a><a class="btn btn-default DTTT_button_csv" id="ToolTables_tabletools_1"><span>CSV</span><div style="position: absolute; left: 0px; top: 0px; width: 48px; height: 29px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_2" src="http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="48" height="29" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=48&amp;height=29" wmode="transparent"></div></a><a class="btn btn-default DTTT_button_xls" id="ToolTables_tabletools_2"><span>Excel</span><div style="position: absolute; left: 0px; top: 0px; width: 54px; height: 29px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_3" src="http://cdn.datatables.net/tabletools/2.2.2/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="54" height="29" name="ZeroClipboard_TableToolsMovie_3" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=54&amp;height=29" wmode="transparent"></div></a><a class="btn btn-default DTTT_button_print" id="ToolTables_tabletools_3" title="View print view"><span>Print</span></a><a class="btn btn-default DTTT_button_text" id="ToolTables_tabletools_4"><span>Select all</span></a><a class="btn btn-default DTTT_button_text disabled" id="ToolTables_tabletools_5"><span>Deselect all</span></a></div><div class="row"><div class="col-md-6 col-xs-12 "><div class="dataTables_length" id="tabletools_length"><label><span><select name="tabletools_length" aria-controls="tabletools" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></span></label></div></div><div class="col-md-6 col-xs-12"><div id="tabletools_filter" class="dataTables_filter"><label><input type="search" class="form-control input-sm" placeholder="" aria-controls="tabletools"></label></div></div></div><table id="tabletools" class="table table-striped table-bordered dataTable" cellspacing="0" width="100%" role="grid" aria-describedby="tabletools_info" style="width: 100%;">
+                <thead>
+                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Title: activate to sort column ascending" style="width: 160px;">Title</th><th class="sorting" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-label="Snippet: activate to sort column ascending" style="width: 257px;">Snippet</th><th class="sorting" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-label="Author: activate to sort column ascending" style="width: 120px;">Author</th><th class="sorting" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-label="Outlet: activate to sort column ascending" style="width: 60px;">Outlet</th><th class="sorting" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 111px;">Date</th><th class="sorting" tabindex="0" aria-controls="tabletools" rowspan="1" colspan="1" aria-label="Impressions: activate to sort column ascending" style="width: 106px;">Impressions</th></tr>
+                </thead>
+                <tbody>
+                    
+                <% @media_hits.each do |h| %>
+                    
+                    <tr role="row" class="odd">
+                        <td><%= h.title %></td>
+                        <td><%= h.text.first(40) %></td>
+                        <td><%= h.author %></td>
+                        <td><%= %></td>
+                        <td class="sorting_1"><%= %></td>
+                        <td><%= %></td>
+                    </tr>
+                <% end %>
+                </tbody>
+            </table>
+                
+            <div class="row"><div class="col-md-4 col-xs-12"><div class="dataTables_info" id="tabletools_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-md-8 col-xs-12"><div class="dataTables_paginate paging_bootstrap" id="tabletools_paginate"><ul class="pagination"><li class="prev disabled"><a href="#">← Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next → </a></li></ul></div></div></div></div></div><div class="slimScrollBar ui-draggable" style="height: 3px; position: absolute; bottom: 3px; opacity: 0.4; display: none; border-radius: 3px; z-index: 99; width: 923px; left: 0px; background: rgb(255, 255, 255);"></div><div class="slimScrollRail" style="width: 100%; height: 3px; position: absolute; bottom: 3px; display: none; border-radius: 3px; opacity: 1; z-index: 90; background: rgb(51, 51, 51);"></div></div>
+        </div>
+    </div>
+    <!-- End .panel -->
+    </div>

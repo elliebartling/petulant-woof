@@ -29,8 +29,8 @@
         <div class="panel-body">
             <p class="mb15">Use this form to add new media hits manually to the database.</p>
 
-        <form class="form-horizontal" role="form">
-            <%= form_for :media_hits, url: media_hits_path do |f| %>
+            <%= form_for :media_hit, class: "form-horizontal", url: media_hits_path do |f| %>
+            
             
             <div class="form-group">
                 <%= f.label :title, :class => 'col-sm-2 control-label' %>
@@ -60,20 +60,12 @@
             
             <div class="col-sm-13 text-right">
                 
-                <%= button_tag( :class => "btn btn-success mr5 mb10") do %>
-                <i class="glyphicon glyphicon-thumbs-up mr5"></i> Save
-                <% end %>
-                
-                <%= button_tag( :class => "btn btn-default mr5 mb10") do %>
-                <i class="glyphicon glyphicon-repeat mr5"></i> Save & Add More 
-                <% end %>
+                <%= f.submit "Save", :class => "btn btn-primary mr5 mb10" %>
 
-                
             </div>
 
 
             <% end %>
-        </form>
             </div>
     </div>
 </div>
