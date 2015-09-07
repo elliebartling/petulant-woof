@@ -21,10 +21,10 @@ if (isAndroid) {
   $('select.form-control').removeClass('form-control').css('width', '100%')
 }
 
-////attach fast click
-//window.addEventListener('load', function() {
-//    FastClick.attach(document.body);
-//}, false);
+//attach fast click
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
 
 //doc ready function
 $(document).ready(function() {
@@ -35,21 +35,21 @@ $(document).ready(function() {
     })
 
     //------------- Init our plugin -------------//
-//    $('body').dynamic({
-//        customScroll: {
-//            color: '#fff', //color of custom scroll
-//            rscolor: '#95A5A6', //color of right sidebar
-//            size: '3px', //size in pixels
-//            opacity: '1', //opacity
-//            alwaysVisible: false //disable hide in
-//        },
+    $('body').dynamic({
+        customScroll: {
+            color: '#fff', //color of custom scroll
+            rscolor: '#95A5A6', //color of right sidebar
+            size: '3px', //size in pixels
+            opacity: '1', //opacity
+            alwaysVisible: false //disable hide in
+        },
         header: {
             fixed: true //fixed header
-        }
-//        breadcrumbs: {
-//            auto: true, //auto populate breadcrumbs via js if is false you need to provide own markup see for example.
-////            homeicon: 'im-home6' //home icon 
-////        },
+        },
+        breadcrumbs: {
+            auto: true, //auto populate breadcrumbs via js if is false you need to provide own markup see for example.
+            homeicon: 'im-home6' //home icon 
+        },
         sidebar: {
             fixed: true,//fixed sidebar
             rememberToggle: true, //remember if sidebar is hided
