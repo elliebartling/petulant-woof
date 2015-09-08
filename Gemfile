@@ -32,6 +32,8 @@ gem 'therubyracer'
 
 gem 'rename'
 
+gem 'bcrypt', '3.1.7'
+
 
 # Attempting to get Datatables to work.. again.
 gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'

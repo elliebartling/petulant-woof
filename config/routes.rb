@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
     
   resources :media_hits
-  resources :todo_lists    
+  resources :todo_lists 
+  resources :users   
     
   root 'welcome#index'
     
