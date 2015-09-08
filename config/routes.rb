@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
   get 'welcome/index'
+  get 'static_pages/home'
+  get 'static_pages/help'
+  get 'signup'  => 'users#new'
+
     
   resources :media_hits
   resources :todo_lists 
   resources :users   
+  resources :static_pages
     
   root 'welcome#index'
     

@@ -1,0 +1,338 @@
+                        <div id="page-header" class="clearfix">
+                            <div class="page-header">
+                                <h2>@<%= @user.username %></h2>
+                                <span class="txt">Profile details for <%= @user.name %></span>
+                            </div>
+                        </div>
+
+                        <% flash.each do |message_type, message| %>
+					        <div class="alert alert-<%= message_type %>"><%= message %></div>
+					    <% end %>
+
+                        <!-- Start .row -->
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- col-lg-4 start here -->
+                                <div class="panel panel-default plain" id="dyn_0">
+                                    <!-- Start .panel -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title bb">Profile details</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row profile">
+                                            <!-- Start .row -->
+                                            <div class="col-md-4">
+                                                <div class="profile-avatar">
+                                                    <img src="/assets/img/avatars/128.jpg" style="max-height:128px;" alt="Avatar">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="profile-name mt10 mb20">
+                                                    <h3 class="mb0"><%= @user.name %></h3>
+                                                    <h5 class="mt0"><%= @user.center %></h5>
+                                                    <p class="job-title mb10"><i class=" l-basic-clockwise"></i>  last updated <%= time_ago_in_words(@user.updated_at) %></p>
+                                                    <a class="btn btn-primary btn-large mr10" href="mailto:<%= @user.email %>"> <i class="fa fa-envelope"></i> Send email</a>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="contact-info bt">
+                                                    <div class="row">
+                                                        <!-- Start .row -->
+                                                        <div class="col-md-4">
+                                                            <dl class="mt20">
+                                                                <dt class="text-muted">Phone</dt>
+                                                                <dd>(367)-045-347</dd>
+                                                                <dt class="text-muted">Email</dt>
+                                                                <dd><%= @user.email %></dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <dl class="mt20">
+                                                                
+                                                                <dt class="text-muted">Slack</dt>
+                                                                <dd>@elliebartling</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End .row -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="profile-info bt mt10">
+                                                    <h5 class="text-muted">Profile info</h5>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores minus consequuntur corporis optio accusantium perspiciatis veritatis temporibus nostrum, saepe omnis aperiam illum odit, quos, cum eveniet
+                                                        possimus illo. Saepe sunt porro culpa repellat dolorem aperiam, quae nihil, maxime ducimus officiis voluptate. Libero obcaecati laboriosam reprehenderit adipisci harum ad, veniam explicabo.</p>
+                                                </div>
+                                                <div class="profile-tags">
+                                                    <h5 class="text-muted">Tags</h5>
+                                                    <form role="form" class="form-horizontal mb15">
+                                                        <input type="text" value="Admin" data-role="tagsinput" style="display: none;"><div class="bootstrap-tagsinput"><span class="tag label label-info">Admin<span data-role="remove"></span></span> <span class="tag label label-info"> Data Analysis Support<span data-role="remove"></span></span> <input type="text" placeholder="" style="width: 3em !important;"></div>
+                                                    </form>
+                                                </div>
+                                                <div class="social bt">
+                                                    <h5 class="text-muted">Social</h5>
+                                                    <dl class="dl-horizontal mb0">
+                                                        <dt>
+                                                            <span class="text-muted">
+                                            <i class="fa fa-facebook-square"></i>
+                                            Facebook:
+                                        </span>
+                                                        </dt>
+                                                        <dd><a href="#">facebook.com/1231</a>
+                                                        </dd>
+                                                        <dt>
+                                                            <span class="text-muted">
+                                            <i class="fa fa-twitter"></i>
+                                            Twitter:
+                                        </span>
+                                                        </dt>
+                                                        <dd><a href="#">twitter.com/profile/3234.html</a>
+                                                        </dd>
+                                                        <dt>
+                                                            <span class="text-muted">
+                                            <i class="fa fa-google-plus"></i>
+                                            Google+:
+                                        </span>
+                                                        </dt>
+                                                        <dd><a href="#">plus.google.com/jonathansmith</a>
+                                                        </dd>
+                                                        <dt>
+                                                            <span class="text-muted">
+                                            <i class="fa fa-linkedin"></i>
+                                            LinkedIn:
+                                        </span>
+                                                        </dt>
+                                                        <dd><a href="#">linkd.in/123123</a>
+                                                        </dd>
+                                                        <dt>
+                                                            <span class="text-muted">
+                                            <i class="fa fa-pinterest"></i>
+                                            Pinterest:
+                                        </span>
+                                                        </dt>
+                                                        <dd><a href="#">pinterst.com/profile/3234.html</a>
+                                                        </dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End .row -->
+                                    </div>
+                                </div>
+                                <!-- End .panel -->
+                                <div class="panel panel-default plain" id="dyn_1">
+                                    <!-- Start .panel -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">User stats</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <ul class="progressbars-stats list-unstyled">
+                                            <li>
+                                                <div class="progressbar-icon"><i class="glyphicon glyphicon-user"></i> 
+                                                </div>
+                                                <span class="progressbar-text">Profile complete</span>
+                                                <div class="progress animated-bar flat mt0">
+                                                    <div class="progress-bar" role="progressbar" data-transitiongoal="40"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="progressbar-icon"><i class="glyphicon glyphicon-comment"></i> 
+                                                </div>
+                                                <span class="progressbar-text">Answer to messages</span>
+                                                <div class="progress animated-bar flat mt0">
+                                                    <div class="progress-bar progress-bar-primary" role="progressbar" data-transitiongoal="83"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="progressbar-icon"><i class="glyphicon glyphicon-hdd"></i> 
+                                                </div>
+                                                <span class="progressbar-text">Space taken</span>
+                                                <div class="progress animated-bar flat mt0">
+                                                    <div class="progress-bar progress-bar-danger" role="progressbar" data-transitiongoal="98"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="progressbar-icon"><i class="fa fa-pie-chart"></i> 
+                                                </div>
+                                                <span class="progressbar-text">Overall</span>
+                                                <div class="progress animated-bar flat mt0">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" data-transitiongoal="62"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End .panel -->
+                            </div>
+                            <!-- col-lg-4 end here -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- col-lg-4 start here -->
+                                <div class="tabs mb20">
+                                    <ul id="profileTab" class="nav nav-tabs">
+                                        <li class="active"><a href="#overview" data-toggle="tab" aria-expanded="true">Overview</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#edit-profile" data-toggle="tab">Edit</a>
+                                        </li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade active in" id="overview">
+                                            <h5>Activity feed</h5>
+                                            <ul class="timeline timeline-icons">
+                                                <li>
+                                                    <p>
+                                                        <a href="#">Jonathan Smith</a> attached new <a href="#">file</a>
+                                                        <span class="timeline-icon"><i class="fa fa-file-text-o"></i></span>
+                                                        <span class="timeline-date">Dec 10, 22:00</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">Jonathan Smith</a> make <a href="#">3 comments</a>
+                                                        <span class="timeline-icon"><i class="fa fa-comment"></i></span>
+                                                        <span class="timeline-date">Dec 8, 13:35</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">Jonathan Smith</a> deposit 300$
+                                                        <span class="timeline-icon"><i class="fa fa-money color-green"></i></span>
+                                                        <span class="timeline-date">Dec 6, 10:17</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">Jonathan Smith</a> purchase <a href="#">3 items</a>
+                                                        <span class="timeline-icon"><i class="fa fa-shopping-cart color-red"></i></span>
+                                                        <span class="timeline-date">Dec 5, 04:36</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">1 support </a> request is received from <a href="#">Jonathan Smith</a>
+                                                        <span class="timeline-icon"><i class="fa fa-life-ring color-gray-light"></i></span>
+                                                        <span class="timeline-date">Dec 4, 18:40</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">12 settings </a> are changed from <a href="#">Jonathan Smith</a>
+                                                        <span class="timeline-icon"><i class="glyphicon glyphicon-cog"></i></span>
+                                                        <span class="timeline-date">Dec 3, 23:17</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="#">Jonathan Smith</a> change your photo
+                                                        <span class="timeline-icon"><i class="l-basic-photo"></i></span>
+                                                        <span class="timeline-date">Dec 2, 05:17</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                            <a href="#" class="btn btn-default timeline-load-more-btn"><i class="fa fa-refresh"></i> Load more </a>
+                                        </div>
+                                        <div class="tab-pane fade pb0" id="edit-profile">
+                                            <form class="form-horizontal group-border stripped" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">First Name</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" id="firstname" name="firstname">
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">Last Name</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" id="lastname" name="lastname">
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">Adress</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" id="address" name="address">
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">Company</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="text" class="form-control" id="company" name="company">
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">Info for you</label>
+                                                    <div class="col-lg-9">
+                                                        <textarea name="info" id="info" rows="10" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <label class="col-lg-3 control-label" for="">Show to public?</label>
+                                                    <div class="col-lg-9">
+                                                        <div class="checkbox-custom">
+                                                            <input type="checkbox" id="public-checkbox">
+                                                            <label for="public-checkbox"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group form-group-vertical">
+                                                    <label class="col-lg-3 control-label" for="">Change password</label>
+                                                    <div class="col-lg-9">
+                                                        <input type="password" class="form-control" id="password" name="password">
+                                                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Repeat your password">
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                                <div class="form-group">
+                                                    <div class="col-lg-9 col-lg-offset-3">
+                                                        <a href="#" class="btn btn-primary" type="subimt">Make change</a>
+                                                    </div>
+                                                </div>
+                                                <!-- End .form-group  -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End .tabs -->
+                            </div>
+                            <!-- col-lg-4 end here -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <!-- col-lg-4 start here -->
+                                <div class="panel panel-default plain" id="dyn_2">
+                                    <!-- Start .panel -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">User purchase</h4>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="user-purchase-chart" style="width: 100%; height: 250px; padding: 0px; position: relative;"><canvas class="flot-base" width="992" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 496px; height: 250px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 76px; text-align: center;">Wed</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 154px; text-align: center;">Thu</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 233px; text-align: center;">Fri</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 309px; text-align: center;">Sat</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 384px; text-align: center;">Sun</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 62px; top: 235px; left: 459px; text-align: center;">Mon</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 213px; left: 5px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 177px; left: 0px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 142px; left: 0px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 107px; left: 0px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 71px; left: 0px; text-align: right;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 36px; left: 0px; text-align: right;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 0px; text-align: right;">60</div></div></div><canvas class="flot-overlay" width="992" height="500" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 496px; height: 250px;"></canvas><div class="legend"><div style="position: absolute; width: 98px; height: 17px; top: -17px; right: 11px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:-17px;right:11px;;font-size:smaller;color:#bfbfbf"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:30px;height:0;border:2px solid rgb(186,195,210);overflow:hidden"></div></div></td><td class="legendLabel">&nbsp;&nbsp;Purchases &nbsp;&nbsp;</td></tr></tbody></table></div></div>
+                                        <div class="row">
+                                            <!-- Start .row -->
+                                            <div class="mt20 bt"></div>
+                                            <div class="col-lg-6 text-center">
+                                                <!-- col-lg-6 start here -->
+                                                <h5 class="mt20 mb0">Stats by type</h5>
+                                                <div id="morris-donut" style="width: 100%; height:180px;"><svg height="180" version="1.1" width="233" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#bac3d2" d="M116.5,143.33333333333334A53.333333333333336,53.333333333333336,0,0,0,136.74221200269972,40.657348088269465" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#bac3d2" stroke="#ffffff" d="M116.5,146.33333333333334A56.333333333333336,56.333333333333336,0,0,0,137.88083642785156,37.88182391823462L146.86331800404955,15.986022132404202A80,80,0,0,1,116.5,170Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#43aea8" d="M136.74221200269972,40.657348088269465A53.333333333333336,53.333333333333336,0,0,0,67.15893806006596,69.7539126969175" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#43aea8" stroke="#ffffff" d="M137.88083642785156,37.88182391823462A56.333333333333336,56.333333333333336,0,0,0,64.38350332594467,68.6150702861191L47.11413164696778,61.528939730040236A75,75,0,0,1,144.96561062879647,20.611895749128948Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#60b1cc" d="M67.15893806006596,69.7539126969175A53.333333333333336,53.333333333333336,0,0,0,82.76358248979147,131.3073671155805" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#60b1cc" stroke="#ffffff" d="M64.38350332594467,68.6150702861191A56.333333333333336,56.333333333333336,0,0,0,80.86590900484224,133.6309065158319L69.05816287626925,148.08848500628505A75,75,0,0,1,47.11413164696778,61.528939730040236Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#df6a78" d="M82.76358248979147,131.3073671155805A53.333333333333336,53.333333333333336,0,0,0,116.48324483945652,143.33333070143885" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#df6a78" stroke="#ffffff" d="M80.86590900484224,133.6309065158319A56.333333333333336,56.333333333333336,0,0,0,116.48230236167595,146.33333055339477L116.47643805548573,164.9999962988984A75,75,0,0,1,69.05816287626925,148.08848500628505Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="116.5" y="80" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-stretch: normal; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" font-weight="800" transform="matrix(1.6162,0,0,1.6162,-71.7732,-54.3763)" stroke-width="0.61875"><tspan dy="5.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Clothes</tspan></text><text x="116.5" y="100" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" transform="matrix(1.147,0,0,1.147,-17.1189,-13.5565)" stroke-width="0.8718750000000001"><tspan dy="4.75" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">45%</tspan></text></svg></div>
+                                            </div>
+                                            <!-- col-lg-6 end here -->
+                                            <div class="col-lg-6 text-center">
+                                                <!-- col-lg-6 start here -->
+                                                <h5 class="mt20 mb0">Purchase distribution</h5>
+                                                <div class="canvas-holder mt15">
+                                                    <canvas id="radar-chartjs" height="278" width="466" style="width: 233px; height: 139px;"></canvas>
+                                                </div>
+                                            </div>
+                                            <!-- col-lg-6 end here -->
+                                        </div>
+                                        <!-- End .row -->
+                                    </div>
+                                </div>
+                                <!-- End .panel -->
+                            </div>
+                            <!-- col-lg-4 end here -->
+                        </div>
+                        <!-- End .row -->
+                    </div>
