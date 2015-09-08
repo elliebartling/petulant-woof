@@ -1,6 +1,10 @@
 class MediaHitsController < ApplicationController
     def index
         @media_hits = MediaHit.all
+        respond_to do |format|
+            format.html
+            format.json { render json: MediaHitsDatatable.new(view_context) }
+        end
     end
     
     def show
@@ -21,7 +25,7 @@ class MediaHitsController < ApplicationController
     
     private
     def media_hit_params
-        params.require(:media_hits).permit(:title, :text, :author)
+        params.require(:media_hit).permit(:title, :text, :author)
     end
     
     

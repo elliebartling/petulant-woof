@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//= require_tree ../../../vendor/assets/plugins/core/.
+//= require_tree ../../../vendor/assets/plugins/tables/datatables/.
+

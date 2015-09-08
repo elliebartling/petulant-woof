@@ -100,9 +100,9 @@
                         <!-- .side-nav -->
                         <div class="side-nav">
                             <ul class="nav">
-                                <li><a href="index.html"><i class="l-basic-laptop"></i><span class="txt">Dashboard</span></a>
+                                <li></i><%= link_to :root do %><i class="l-basic-laptop"></i><span class="txt">Dashboard</span><% end %>
                                 </li>
-                                <li><a href="#" target="_blank"><i class="l-basic-elaboration-message-heart"></i><span class="txt">News</span><span class="label">new</span></a>
+                                <li><a href="#"><i class="l-basic-elaboration-message-heart"></i><span class="txt">News</span><span class="label">new</span></a>
                                     <ul class="sub">
                                         <li><%= link_to 'News Feed', media_hits_path, :style => "text-decoration:none" %>
                                         </li>
