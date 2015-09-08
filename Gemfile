@@ -32,6 +32,11 @@ gem 'therubyracer'
 
 gem 'rename'
 
+
+# Attempting to get Datatables to work.. again.
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
